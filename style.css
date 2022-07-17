@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    width: 100%;
+}
+h1{
+    font-size: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 39px;
+    margin-top: 2px;
+    padding-top: 22px;
+    letter-spacing: 3px;
+    padding-left: 162px;
+}
+.content{
+    background-color: white;
+    border:1px solid gray;
+    height: auto;
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 1px 1px 10px lightgray;
+    position: relative;
+}
+
+.content:hover{
+    box-shadow: 0 0 12px 3px #a1ed32;
+}
+.circle{
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    top: 16px;
+    border: gray 2px solid;
+    z-index: 5;
+  
+  }
+
+  .content:nth-child(2n+1):hover .circle{
+    box-shadow: 0 0 5px rgb(4,153,28);
+    border-color: #70a81a;
+    background-color: #70a81a;
+  }
+
+  .content:nth-child(2n):hover .circle{
+    box-shadow: 0 0 5px rgb(4,153,28);
+    border-color: #70a81a;
+    background-color: #70a81a;
+  }
+
+  .line:hover{
+    box-shadow: 0 0 3px #a1ed32;
+    width: 5px;
+    border-right: 2px;
+  }
+
+.content:nth-child(2n) .circle{
+    position: absolute;
+    left: -26px;
+}
+
+.content:nth-child(2n+1) .circle{
+    position: absolute;
+    right: -28px;
+    
+}
+
+.content:nth-child(2n)::before{
+    content: '';
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    z-index: 4;
+    position: absolute;
+    left: -7px;
+    top: 16px;
+    transform: rotate(-45deg);
+}
+
+.content:nth-child(2n+1)::after{
+    content: '';
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    z-index: 4;
+    position: absolute;
+    right: -7px;
+    transform: rotate(-45deg);
+    top: 16px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.line{
+    border-left: 2px solid #f8f6f0;
+}
+
+.timeline .content:nth-child(even){
+    right: -100%;
+    position: relative;
+}
+
+.date{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    top: -32px;
+    position: absolute;
+    width: auto;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 3px;
+}
